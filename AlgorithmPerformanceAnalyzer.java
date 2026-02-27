@@ -1,7 +1,5 @@
 package module3;
-
 import java.util.Random;
-import java.util.Arrays;
 
 public class AlgorithmPerformanceAnalyzer {
 
@@ -55,12 +53,9 @@ public class AlgorithmPerformanceAnalyzer {
             // Generate array
             int[] arr = generateArray(size);
 
-            // Copy array for sorting
-            int[] sortArr = Arrays.copyOf(arr, arr.length);
-
             // Measure Bubble Sort time
             long startSort = System.nanoTime();
-            bubbleSort(sortArr);
+            bubbleSort(arr);
             long endSort = System.nanoTime();
             long sortingTime = endSort - startSort;
 
@@ -81,3 +76,4 @@ public class AlgorithmPerformanceAnalyzer {
         System.out.println("Test completed successfully.");
     }
 }
+
